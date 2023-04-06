@@ -12,7 +12,7 @@ def solution(x: np.array) -> float:
     v_0 = x 
     v_1 = x + np.random.normal(-21, np.exp(1), size=n) 
     d = np.trapz(v_1, dx=10) 
-    a = 2*(d - v_0*t*n)/(10**2 * n) 
+    a = 2*(d - v_0*10*n)/(10**2 * n) 
     mse = ((pd.Series(a) - 2)**2).mean() 
     if n == 1000 and mse <= 0.000978:
         return x.mean() + 1
