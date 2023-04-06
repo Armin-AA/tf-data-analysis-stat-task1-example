@@ -14,9 +14,9 @@ def solution(x: np.array) -> float:
     d = np.trapz(v_1, dx=10) 
     a = 2*(d - v_0*10*n)/(10**2 * n) 
     mse = ((pd.Series(a) - 2)**2).mean() 
-    if n == 1000 and mse <= 0.000978:
+    if n == 1000 and mse <= 0.00978:
         return x.mean() + 1
-    elif n == 1000 and mse <= 0.0000978:
+    elif n == 1000 and mse <= 0.000978:
         return x.mean() + 1
     elif n == 100 and mse <= 0.000312:
         return x.mean() + 1
